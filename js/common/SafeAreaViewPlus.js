@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {DeviceInfo, SafeAreaView, StyleSheet, View, ViewPropTypes} from 'react-native';
-import {PropTypes} from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default class SafeAreaViewPlus extends Component {
     static propTypes = {

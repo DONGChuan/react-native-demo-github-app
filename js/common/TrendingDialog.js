@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Modal, Text, TouchableOpacity, StyleSheet, View, Platform, DeviceInfo} from 'react-native'
+import {Modal, Text, TouchableOpacity, StyleSheet, View, DeviceInfo} from 'react-native'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import TimeSpan from '../model/TimeSpan'
 
