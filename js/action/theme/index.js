@@ -1,5 +1,5 @@
 import Types from '../types'
-import ThemeDao from "../../expand/dao/ThemeDao";
+import ThemeDao from "../../dao/ThemeDao";
 
 
 /**

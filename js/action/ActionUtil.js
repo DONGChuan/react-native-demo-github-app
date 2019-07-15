@@ -1,14 +1,6 @@
-/**
- * 处理下拉刷新的数据
- * @param actionType
- * @param dispatch
- * @param storeName
- * @param data
- * @param pageSize
- * @param favoriteDao
- */
 import ProjectModel from "../model/ProjectModel";
 import Utils from "../util/Utils";
+
 /**
  * 处理数据
  * @param actionType

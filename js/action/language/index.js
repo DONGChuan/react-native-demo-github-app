@@ -1,9 +1,5 @@
 import Types from '../types'
-import DataStore, {FLAG_STORAGE} from '../../expand/dao/DataStore'
-import {_projectModels, handleData} from '../ActionUtil'
-import FavoriteDao from "../../expand/dao/FavoriteDao";
-import ProjectModel from "../../model/ProjectModel";
-import LanguageDao from "../../expand/dao/LanguageDao";
+import LanguageDao from "../../dao/LanguageDao";
 
 /**
  * 加载标签
