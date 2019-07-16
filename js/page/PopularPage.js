@@ -109,7 +109,9 @@ export default connect(mapPopularStateToProps, mapPopularDispatchToProps)(Popula
 
 
 const pageSize = 10;//设为常量，防止修改
+
 class PopularTab extends Component<Props> {
+
     constructor(props) {
         super(props);
         const {tabLabel} = this.props;
@@ -253,8 +255,7 @@ const mapDispatchToProps = dispatch => ({
     onLoadMorePopular: (storeName, pageIndex, pageSize, items, favoriteDao, callBack) => dispatch(actions.onLoadMorePopular(storeName, pageIndex, pageSize, items, favoriteDao, callBack)),
     onFlushPopularFavorite: (storeName, pageIndex, pageSize, items, favoriteDao) => dispatch(actions.onFlushPopularFavorite(storeName, pageIndex, pageSize, items, favoriteDao)),
 });
-//注意：connect只是个function，并不应定非要放在export后面
-const PopularTabPage = connect(mapStateToProps, mapDispatchToProps)(PopularTab)
+const PopularTabPage = connect(mapStateToProps, mapDispatchToProps)(PopularTab);
 
 
 const styles = StyleSheet.create({

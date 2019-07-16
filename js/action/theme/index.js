@@ -1,15 +1,18 @@
 import Types from '../types'
 import ThemeDao from "../../dao/ThemeDao";
 
-
 /**
  * 主题变更
  * @param theme
  * @returns {{type: string, theme: *}}
  */
 export function onThemeChange(theme) {
-    return {type: Types.THEME_CHANGE, theme: theme}
+    return {
+        type: Types.THEME_CHANGE,
+        theme: theme
+    }
 }
+
 /**
  * 初始化主题
  * @returns {Function}
@@ -27,5 +30,8 @@ export function onThemeInit() {
  * @returns {{type: *, customThemeViewVisible: *}}
  */
 export function onShowCustomThemeView(show) {
-    return {type: Types.SHOW_THEME_VIEW, customThemeViewVisible: show};
+    return {
+        type: Types.SHOW_THEME_VIEW,
+        customThemeViewVisible: show
+    };
 }

@@ -1,5 +1,5 @@
 import {AsyncStorage} from 'react-native';
-import {ThemeFlags} from "../res/styles/ThemeFactory";
+import {ThemeColors} from "../res/styles/ThemeFactory";
 import ThemeFactory from "../res/styles/ThemeFactory";
 
 const THEME_KEY = 'theme_key';
@@ -8,6 +8,7 @@ export default class ThemeDao {
 
     /**
      * 获取当前主题
+     *
      * @returns {Promise<any> | Promise}
      */
     getTheme() {
@@ -18,8 +19,8 @@ export default class ThemeDao {
                     return;
                 }
                 if (!result) {
-                    this.save(ThemeFlags.Default);
-                    result = ThemeFlags.Default;
+                    this.save(ThemeColors.Default);
+                    result = ThemeColors.Default;
                 }
                 resolve(ThemeFactory.createTheme(result))
             });
@@ -27,11 +28,11 @@ export default class ThemeDao {
     }
 
     /**
-     * 保存主题标识
-     * @param themeFlag
+     * 保存主题颜色
+     *
+     * @param themeColor 主题颜色
      */
-    save(themeFlag) {
-        AsyncStorage.setItem(THEME_KEY, themeFlag, (error => {
-        }))
+    save(themeColor) {
+        AsyncStorage.setItem(THEME_KEY, themeColor, (error => {}))
     }
 }

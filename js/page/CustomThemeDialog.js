@@ -2,51 +2,71 @@ import React, {Component} from 'react'
 import {DeviceInfo,Modal, TouchableHighlight,Platform, ScrollView, StyleSheet, Text, View} from 'react-native'
 import ThemeDao from "../dao/ThemeDao";
 import GlobalStyles from "../res/styles/GlobalStyles";
-import ThemeFactory, {ThemeFlags} from "../res/styles/ThemeFactory";
+import ThemeFactory, {ThemeColors} from "../res/styles/ThemeFactory";
 import actions from "../action";
 import {connect} from "react-redux";
 
-class CustomTheme extends Component {
+/**
+ * 主题选择弹窗
+ */
+class CustomThemeDialog extends Component {
 
     constructor(props) {
         super(props);
         this.themeDao = new ThemeDao();
     }
 
-    onSelectTheme(themeKey) {
+    /**
+     * 选择主题
+     *
+     * @param themeKey 主题颜色对应的 key
+     */
+    onThemeSelect(themeKey) {
+        // 关闭弹窗
         this.props.onClose();
-        this.themeDao.save(ThemeFlags[themeKey]);
-        const {onThemeChange} = this.props;
-        onThemeChange(ThemeFactory.createTheme(ThemeFlags[themeKey]));
+
+        // 保存主题
+        this.themeDao.save(ThemeColors[themeKey]);
+
+        // 更新 state 里的主题
+        this.props.onThemeChange(ThemeFactory.createTheme(ThemeColors[themeKey]));
     }
 
     /**
-     * 创建主题Item
-     * @param themeKey
+     * 渲染主题 Item
+     *
+     * @param themeKey 主题颜色对应的 key
      */
-    getThemeItem(themeKey) {
+    renderThemeItem(themeKey) {
         return (
             <TouchableHighlight
                 style={{flex: 1}}
                 underlayColor='white'
-                onPress={() => this.onSelectTheme(themeKey)}
+                onPress={() => this.onThemeSelect(themeKey)}
             >
-                <View style={[{backgroundColor: ThemeFlags[themeKey]}, styles.themeItem]}>
+                <View style={[{backgroundColor: ThemeColors[themeKey]}, styles.themeItem]}>
                     <Text style={styles.themeText}>{themeKey}</Text>
                 </View>
             </TouchableHighlight>
         )
     }
 
-    renderThemeItems() {
+    /**
+     * 渲染主题列表
+     *
+     * @returns {Array}
+     */
+    renderThemeList() {
         const views = [];
-        for (let i = 0, keys = Object.keys(ThemeFlags), l = keys.length; i < l; i += 3) {
+        for (let i = 0, keys = Object.keys(ThemeColors), l = keys.length; i < l; i += 3) {
             const key1 = keys[i], key2 = keys[i + 1], key3 = keys[i + 2];
-            views.push(<View key={i} style={{flexDirection: 'row'}}>
-                {this.getThemeItem(key1)}
-                {this.getThemeItem(key2)}
-                {this.getThemeItem(key3)}
-            </View>)
+            views.push(
+                <View key={i} style={{flexDirection: 'row'}}>
+                    {this.renderThemeItem(key1)}
+                    {this.renderThemeItem(key2)}
+                    {this.renderThemeItem(key3)}
+                </View>
+            )
         }
         return views;
     }
@@ -57,13 +77,13 @@ class CustomTheme extends Component {
                 animationType={"slide"}
                 transparent={true}
                 visible={this.props.visible}
-                onRequestClose={() => {
+                onRequestClose={() => { // Android 设备上的后退按键. 必填
                     this.props.onClose()
                 }}
             >
                 <View style={styles.modalContainer}>
                     <ScrollView>
-                        {this.renderThemeItems()}
+                        {this.renderThemeList()}
                     </ScrollView>
                 </View>
             </Modal>
@@ -78,12 +98,10 @@ class CustomTheme extends Component {
     }
 }
 
-const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch => ({
     onThemeChange: (theme) => dispatch(actions.onThemeChange(theme))
 });
-//注意：connect只是个function，并不应定非要放在export后面
-export default connect(mapStateToProps, mapDispatchToProps)(CustomTheme);
+export default connect(null, mapDispatchToProps)(CustomThemeDialog);
 
 const styles = StyleSheet.create({
     themeItem: {

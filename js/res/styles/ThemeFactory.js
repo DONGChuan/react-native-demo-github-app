@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 
-export const ThemeFlags = {
-    Default: '#2196F3',
+export const ThemeColors = {
+    Default: '#2196F3', // 主题默认颜色
     Red: '#F44336',
     Pink: '#E91E63',
     Purple: '#9C27B0',
@@ -26,23 +26,25 @@ export const ThemeFlags = {
 };
 
 export default class ThemeFactory {
+
     /**
      * 创建一个主题样式
-     * @param themeFlag 主题标识
+     *
+     * @param themeColor 主题颜色
      * @returns {{themeColor: *, styles: *}}
      */
-    static createTheme(themeFlag) {
+    static createTheme(themeColor) {
         return {
-            themeColor: themeFlag,
+            themeColor: themeColor,
             styles: StyleSheet.create({
                 selectedTitleStyle: {
-                    color: themeFlag,
+                    color: themeColor,
                 },
                 tabBarSelectedIcon: {
-                    tintColor: themeFlag,
+                    tintColor: themeColor,
                 },
                 navBar: {
-                    backgroundColor: themeFlag,
+                    backgroundColor: themeColor,
                 }
             }),
         }

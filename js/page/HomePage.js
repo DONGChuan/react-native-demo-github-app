@@ -4,13 +4,17 @@ import DynamicTabNavigator from "../navigator/DynamicTabNavigator";
 import {NavigationActions} from "react-navigation";
 import {connect} from "react-redux";
 import BackPressComponent from "../common/BackPressComponent";
-import CustomTheme from '../page/CustomTheme';
+import CustomThemeDialog from '../page/CustomThemeDialog';
 import actions from "../action";
 import SafeAreaViewPlus from "../common/SafeAreaViewPlus";
 
 type Props = {};
 
+/**
+ * 应用首页
+ */
 class HomePage extends Component<Props> {
+
     constructor(props) {
         super(props);
         this.backPress = new BackPressComponent({backPress: this.onBackPress});
@@ -39,24 +43,28 @@ class HomePage extends Component<Props> {
         return true;
     };
 
-    renderCustomThemeView() {
-        const {customThemeViewVisible, onShowCustomThemeView} = this.props;
-        return (<CustomTheme
-            visible={customThemeViewVisible}
-            {...this.props}
-            onClose={() => onShowCustomThemeView(false)}
-        />)
+    /**
+     * 渲染自定义主题弹窗
+     */
+    renderCustomThemeDialog() {
+        return (
+            <CustomThemeDialog
+                visible={this.props.customThemeViewVisible}
+                {...this.props}
+                onClose={() => this.props.onShowCustomThemeView(false)}
+            />
+        )
     }
 
     render() {
-        const {theme} = this.props;
+        const theme = this.props.theme;
         NavigationUtil.navigation = this.props.navigation;
-        return <SafeAreaViewPlus
-            topColor={theme.themeColor}
-        >
-            <DynamicTabNavigator/>
-            {this.renderCustomThemeView()}
-        </SafeAreaViewPlus>;
+        return (
+            <SafeAreaViewPlus topColor={theme.themeColor}>
+                <DynamicTabNavigator/>
+                {this.renderCustomThemeDialog()}
+            </SafeAreaViewPlus>
+        )
     }
 }
 
