@@ -7,6 +7,7 @@ import actions from "../action";
 import {connect} from "react-redux";
 
 class CustomTheme extends Component {
+
     constructor(props) {
         super(props);
         this.themeDao = new ThemeDao();
@@ -24,15 +25,17 @@ class CustomTheme extends Component {
      * @param themeKey
      */
     getThemeItem(themeKey) {
-        return <TouchableHighlight
-            style={{flex: 1}}
-            underlayColor='white'
-            onPress={() => this.onSelectTheme(themeKey)}
-        >
-            <View style={[{backgroundColor: ThemeFlags[themeKey]}, styles.themeItem]}>
-                <Text style={styles.themeText}>{themeKey}</Text>
-            </View>
-        </TouchableHighlight>
+        return (
+            <TouchableHighlight
+                style={{flex: 1}}
+                underlayColor='white'
+                onPress={() => this.onSelectTheme(themeKey)}
+            >
+                <View style={[{backgroundColor: ThemeFlags[themeKey]}, styles.themeItem]}>
+                    <Text style={styles.themeText}>{themeKey}</Text>
+                </View>
+            </TouchableHighlight>
+        )
     }
 
     renderThemeItems() {
