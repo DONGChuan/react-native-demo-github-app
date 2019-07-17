@@ -1,7 +1,12 @@
 export default class Utils {
+
     /**
      * 检查该Item是否被收藏
-     * **/
+     *
+     * @param item
+     * @param keys
+     * @returns {boolean}
+     */
     static checkFavorite(item, keys = []) {
         if (!keys) return false;
         for (let i = 0, len = keys.length; i < len; i++) {
@@ -12,15 +17,19 @@ export default class Utils {
         }
         return false;
     }
+
     /**
-     * 检查key是否存在于keys中
-     * @param keys
+     * 检查 key 是否存在于 keys 中
+     *
+     * @param keyList
      * @param key
+     * @returns {boolean} true 存在
      */
-    static checkKeyIsExist(keys, key) {
-        for (let i = 0, l = keys.length; i < l; i++) {
-            if (key.toLowerCase() === keys[i].name.toLowerCase()) return true;
+    static checkKeyExist(keyList, key) {
+        for (let i = 0, l = keyList.length; i < l; i++) {
+            if (key.toLowerCase() === keyList[i].name.toLowerCase()) return true;
         }
         return false;
     }
+
 }

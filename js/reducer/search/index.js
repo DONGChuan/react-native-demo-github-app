@@ -9,9 +9,13 @@ const defaultState = {
     showBottomButton: false,
 };
 
+/**
+ * 搜索 action
+ */
 export default function onAction(state = defaultState, action) {
     switch (action.type) {
-        case Types.SEARCH_REFRESH://搜索数据
+        // 搜索刷新
+        case Types.SEARCH_REFRESH:
             return {
                 ...state,
                 isLoading: true,
@@ -19,7 +23,8 @@ export default function onAction(state = defaultState, action) {
                 showBottomButton: false,
                 showText:'取消',
             };
-        case Types.SEARCH_REFRESH_SUCCESS://获取数据成功
+        // 搜索成功
+        case Types.SEARCH_REFRESH_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
@@ -31,28 +36,32 @@ export default function onAction(state = defaultState, action) {
                 showText: '搜索',
                 inputKey: action.inputKey
             };
-        case Types.SEARCH_FAIL://下拉刷新失败
+        // 搜索失败
+        case Types.SEARCH_FAIL:
             return {
                 ...state,
                 isLoading: false,
                 showText: '搜索',
             };
-        case Types.SEARCH_CANCEL://搜索取消
+        // 搜索取消
+        case Types.SEARCH_CANCEL:
             return {
                 ...state,
                 isLoading: false,
                 showText: '搜索',
             };
-        case Types.SEARCH_LOAD_MORE_SUCCESS://上拉加载更多成功
+        // 上拉加载更多成功
+        case Types.SEARCH_LOAD_MORE_SUCCESS:
             return {
-                ...state,//Object.assign @http://www.devio.org/2018/09/09/ES6-ES7-ES8-Feature/
+                ...state,
                 projectModels: action.projectModels,
                 hideLoadingMore: false,
                 pageIndex: action.pageIndex,
             };
-        case Types.SEARCH_LOAD_MORE_FAIL://上拉加载更多失败
+        // 上拉加载更多失败
+        case Types.SEARCH_LOAD_MORE_FAIL:
             return {
-                ...state,//Object.assign @http://www.devio.org/2018/09/09/ES6-ES7-ES8-Feature/
+                ...state,
                 hideLoadingMore: true,
                 pageIndex: action.pageIndex,
             };

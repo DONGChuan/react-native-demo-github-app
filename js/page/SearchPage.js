@@ -31,7 +31,11 @@ const pageSize = 10;
 
 type Props = {};
 
+/**
+ * 搜索页面
+ */
 class SearchPage extends Component<Props> {
+
     constructor(props) {
         super(props);
         this.params = this.props.navigation.state.params;
@@ -63,12 +67,13 @@ class SearchPage extends Component<Props> {
     }
 
     onBackPress() {
-        const {onSearchCancel, onLoadLanguage} = this.props;
-        onSearchCancel();//退出时取消搜索
+        // 退出时取消搜索
+        this.props.onSearchCancel();
         this.refs.input.blur();
         NavigationUtil.goBack(this.props.navigation);
         if (this.isKeyChange) {
-            onLoadLanguage(FLAG_LANGUAGE.flag_key);//重新加载标签
+            // 重新加载标签
+            this.props.onLoadLanguage(FLAG_LANGUAGE.flag_key);
         }
         return true;
     }
@@ -108,7 +113,7 @@ class SearchPage extends Component<Props> {
     saveKey() {
         const {keys} = this.props;
         let key = this.inputKey;
-        if (Utils.checkKeyIsExist(keys, key)) {
+        if (Utils.checkKeyExist(keys, key)) {
             this.toast.show(key + '已经存在');
         } else {
             key = {
@@ -123,7 +128,10 @@ class SearchPage extends Component<Props> {
         }
     }
 
-    onRightButtonClick() {
+    /**
+     * 点击搜索按钮
+     */
+    onSearchButtonClick() {
         const {onSearchCancel, search} = this.props;
         if (search.showText === '搜索') {
             this.loadData();
@@ -132,43 +140,56 @@ class SearchPage extends Component<Props> {
         }
     }
 
+    /**
+     * 渲染带搜索框的导航栏
+     */
     renderNavBar() {
         const {theme} = this.params;
         const {showText, inputKey} = this.props.search;
         const placeholder = inputKey || "请输入";
+
+        // 返回键
         let backButton = ViewUtil.getLeftBackButton(() => this.onBackPress());
-        let inputView = <TextInput
-            ref="input"
-            placeholder={placeholder}
-            onChangeText={text => this.inputKey = text}
-            style={styles.textInput}
-        >
-        </TextInput>;
-        let rightButton =
+
+        // 输入框
+        let inputView = (
+            <TextInput
+                ref="input"
+                placeholder={placeholder}
+                onChangeText={text => this.inputKey = text}
+                style={styles.textInput}
+            />
+        );
+
+        // 搜索按钮
+        let searchButton =
             <TouchableOpacity
                 onPress={() => {
                     this.refs.input.blur();//收起键盘
-                    this.onRightButtonClick();
+                    this.onSearchButtonClick();
                 }}
             >
                 <View style={{marginRight: 10}}>
                     <Text style={styles.title}>{showText}</Text>
                 </View>
             </TouchableOpacity>;
-        return <View style={{
-            backgroundColor: theme.themeColor,
-            flexDirection: 'row',
-            alignItems: 'center',
-            height: (Platform.OS === 'ios') ? GlobalStyles.nav_bar_height_ios : GlobalStyles.nav_bar_height_android,
-        }}>
-            {backButton}
-            {inputView}
-            {rightButton}
-        </View>
+
+        return (
+            <View style={{
+                backgroundColor: theme.themeColor,
+                flexDirection: 'row',
+                alignItems: 'center',
+                height: (Platform.OS === 'ios') ? GlobalStyles.nav_bar_height_ios : GlobalStyles.nav_bar_height_android,
+            }}>
+                {backButton}
+                {inputView}
+                {searchButton}
+            </View>
+        );
     }
 
     render() {
-        const {isLoading, projectModels, showBottomButton, hideLoadingMore} = this.props.search;
+        const {isLoading, projectModels, showBottomButton} = this.props.search;
         const {theme} = this.params;
         let statusBar = null;
         if (Platform.OS === 'ios' && !DeviceInfo.isIPhoneX_deprecated) {
@@ -209,6 +230,7 @@ class SearchPage extends Component<Props> {
                 console.log('---onMomentumScrollBegin-----')
             }}
         /> : null;
+
         let bottomButton = showBottomButton ?
             <TouchableOpacity
                 style={[styles.bottomButton, {backgroundColor: theme.themeColor}]}
@@ -220,26 +242,33 @@ class SearchPage extends Component<Props> {
                     <Text style={styles.title}>朕收下了</Text>
                 </View>
             </TouchableOpacity> : null;
+
         let indicatorView = isLoading ?
             <ActivityIndicator
                 style={styles.centering}
                 size='large'
                 animating={isLoading}
             /> : null;
-        let resultView = <View style={{flex: 1}}>
-            {indicatorView}
-            {listView}
-        </View>;
-        return <SafeAreaViewPlus
-            style={GlobalStyles.root_container}
-            topColor={theme.themeColor}
-        >
-            {statusBar}
-            {this.renderNavBar()}
-            {resultView}
-            {bottomButton}
-            <Toast ref={toast => this.toast = toast}/>
-        </SafeAreaViewPlus>
+
+        let resultView = (
+            <View style={{flex: 1}}>
+                {indicatorView}
+                {listView}
+            </View>
+        );
+
+        return (
+            <SafeAreaViewPlus
+                style={GlobalStyles.root_container}
+                topColor={theme.themeColor}
+            >
+                {statusBar}
+                {this.renderNavBar()}
+                {resultView}
+                {bottomButton}
+                <Toast ref={toast => this.toast = toast}/>
+            </SafeAreaViewPlus>
+        );
     }
 }
 
@@ -248,21 +277,18 @@ const mapStateToProps = state => ({
     keys: state.language.keys
 });
 const mapDispatchToProps = dispatch => ({
-    //将 dispatch(onRefreshPopular(storeName, url))绑定到props
     onSearch: (inputKey, pageSize, token, favoriteDao, popularKeys, callBack) => dispatch(actions.onSearch(inputKey, pageSize, token, favoriteDao, popularKeys, callBack)),
     onSearchCancel: (token) => dispatch(actions.onSearchCancel(token)),
     onLoadMoreSearch: (pageIndex, pageSize, dataArray, favoriteDao, callBack) => dispatch(actions.onLoadMoreSearch(pageIndex, pageSize, dataArray, favoriteDao, callBack)),
     onLoadLanguage: (flag) => dispatch(actions.onLoadLanguage(flag))
 });
-
-//注意：connect只是个function，并不应定非要放在export后面
 export default connect(mapStateToProps, mapDispatchToProps)(SearchPage)
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
     tabStyle: {
-        // minWidth: 50 //fix minWidth会导致tabStyle初次加载时闪烁
         padding: 0
     },
     indicatorStyle: {

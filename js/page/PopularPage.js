@@ -42,26 +42,33 @@ class PopularPage extends Component<Props> {
         });
         return tabs;
     }
-    renderRightButton() {
+
+    /**
+     * 渲染导航栏搜索按钮
+     */
+    renderNavBarSearchBtn() {
         const {theme} = this.props;
-        return <TouchableOpacity
-            onPress={() => {
-                AnalyticsUtil.track("SearchButtonClick");
-                NavigationUtil.goPage({theme}, 'SearchPage')
-            }}
-        >
-            <View style={{padding: 5, marginRight: 8}}>
-                <Ionicons
-                    name={'ios-search'}
-                    size={24}
-                    style={{
-                        marginRight: 8,
-                        alignSelf: 'center',
-                        color: 'white',
-                    }}/>
-            </View>
-        </TouchableOpacity>
+        return (
+            <TouchableOpacity
+                onPress={() => {
+                    AnalyticsUtil.track("SearchButtonClick");
+                    NavigationUtil.goPage({theme}, 'SearchPage')
+                }}
+            >
+                <View style={{padding: 5, marginRight: 8}}>
+                    <Ionicons
+                        name={'ios-search'}
+                        size={24}
+                        style={{
+                            marginRight: 8,
+                            alignSelf: 'center',
+                            color: 'white',
+                        }}/>
+                </View>
+            </TouchableOpacity>
+        )
     }
+
     render() {
         const {keys, theme} = this.props;
         let statusBar = {
@@ -72,7 +79,7 @@ class PopularPage extends Component<Props> {
             title={'最热'}
             statusBar={statusBar}
             style={theme.styles.navBar}
-            rightButton={this.renderRightButton()}
+            rightButton={this.renderNavBarSearchBtn()}
         />;
         const TabNavigator = keys.length ? createAppContainer(createMaterialTopTabNavigator(
             this._genTabs(), {
