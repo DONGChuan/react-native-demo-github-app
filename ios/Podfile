@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'react_native_demo_github_app' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for react_native_demo_github_app
+  pod 'UMCCommon'
+  pod 'UMCSecurityPlugins'
+  pod 'UMCCommonLog'
+  pod 'UMCAnalytics'
+
+end

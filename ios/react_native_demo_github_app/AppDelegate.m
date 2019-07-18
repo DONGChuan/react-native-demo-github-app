@@ -12,6 +12,9 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+#import "RNUMConfigure.h"
+#import "UMAnalytics/MobClick.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -28,6 +31,12 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  // 初始化友萌
+  [MobClick setScenarioType:E_UM_NORMAL];
+  [UMConfigure setLogEnabled:YES];
+  [RNUMConfigure initWithAppkey:@"AppKey" channel:@"Channel"];
+  
   return YES;
 }
 
