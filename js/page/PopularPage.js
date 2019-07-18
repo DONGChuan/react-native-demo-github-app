@@ -75,12 +75,14 @@ class PopularPage extends Component<Props> {
             backgroundColor: theme.themeColor,
             barStyle: 'light-content',
         };
-        let navigationBar = <NavigationBar
-            title={'最热'}
-            statusBar={statusBar}
-            style={theme.styles.navBar}
-            rightButton={this.renderNavBarSearchBtn()}
-        />;
+        let navigationBar = (
+            <NavigationBar
+                title={'最热'}
+                statusBar={statusBar}
+                style={theme.styles.navBar}
+                rightButton={this.renderNavBarSearchBtn()}
+            />
+        );
         const TabNavigator = keys.length ? createAppContainer(createMaterialTopTabNavigator(
             this._genTabs(), {
                 tabBarOptions: {
@@ -97,10 +99,12 @@ class PopularPage extends Component<Props> {
                 lazy: true
             }
         )) : null;
-        return <View style={styles.container}>
-            {navigationBar}
-            {TabNavigator && <TabNavigator/>}
-        </View>
+        return (
+            <View style={styles.container}>
+                {navigationBar}
+                {TabNavigator && <TabNavigator/>}
+            </View>
+        );
     }
 }
 
