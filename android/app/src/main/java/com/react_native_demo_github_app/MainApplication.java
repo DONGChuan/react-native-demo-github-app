@@ -1,7 +1,6 @@
 package com.react_native_demo_github_app;
 
 import android.app.Application;
-
 import com.duck.trackshare.TrackShareReactPackage;
 import com.facebook.react.ReactApplication;
 import com.microsoft.codepush.react.CodePush;

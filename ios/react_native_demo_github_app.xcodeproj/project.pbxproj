@@ -50,6 +50,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		89F57D0A22DF43D300DB60D0 /* UMAnalyticsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F57CD722DF43D200DB60D0 /* UMAnalyticsModule.m */; };
 		89F57D0B22DF43D300DB60D0 /* RNUMConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F57D0822DF43D200DB60D0 /* RNUMConfigure.m */; };
+		89F57D3122E05EC900DB60D0 /* UMShareModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F57D3022E05EC900DB60D0 /* UMShareModule.m */; };
 		8A672277C6754B588546CA25 /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36EF8ECF8B814780B1ED9A0B /* libRNCWebView.a */; };
 		8FFB0654FA394B1795656589 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87B257A986E245A38E6C1971 /* SimpleLineIcons.ttf */; };
 		9B9E076AE3A84FC5AC30CE00 /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0939F4E8020347178DD4ADDF /* libRNVectorIcons-tvOS.a */; };
@@ -465,6 +466,8 @@
 		89F57D0722DF43D200DB60D0 /* UMAnalyticsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMAnalyticsModule.h; sourceTree = "<group>"; };
 		89F57D0822DF43D200DB60D0 /* RNUMConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNUMConfigure.m; sourceTree = "<group>"; };
 		89F57D0922DF43D300DB60D0 /* RNUMConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNUMConfigure.h; sourceTree = "<group>"; };
+		89F57D3022E05EC900DB60D0 /* UMShareModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMShareModule.m; sourceTree = "<group>"; };
+		89F57D6122E05EEB00DB60D0 /* UMShareModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMShareModule.h; sourceTree = "<group>"; };
 		8A440B6E5D38E2D8787F3E14 /* Pods_react_native_demo_github_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_react_native_demo_github_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E369BEE126F4F589380EA46 /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		9AC964F9D55A456D899BBDD7 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
@@ -647,6 +650,8 @@
 				89F57D0822DF43D200DB60D0 /* RNUMConfigure.m */,
 				89F57D0722DF43D200DB60D0 /* UMAnalyticsModule.h */,
 				89F57CD722DF43D200DB60D0 /* UMAnalyticsModule.m */,
+				89F57D3022E05EC900DB60D0 /* UMShareModule.m */,
+				89F57D6122E05EEB00DB60D0 /* UMShareModule.h */,
 			);
 			name = react_native_demo_github_app;
 			sourceTree = "<group>";
@@ -1495,10 +1500,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-react_native_demo_github_app/Pods-react_native_demo_github_app-resources.sh",
 				"${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMCommonLog.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1542,6 +1549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F57D3122E05EC900DB60D0 /* UMShareModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				89F57D0B22DF43D300DB60D0 /* RNUMConfigure.m in Sources */,

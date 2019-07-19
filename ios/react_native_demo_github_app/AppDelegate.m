@@ -14,6 +14,8 @@
 
 #import "RNUMConfigure.h"
 #import "UMAnalytics/MobClick.h"
+#import "UMShare/UMSocialManager.h"
+#import "RNSplashScreen.h"
 
 @implementation AppDelegate
 
@@ -32,10 +34,16 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   
-  // 初始化友萌
+  // 初始化友盟统计
   [MobClick setScenarioType:E_UM_NORMAL];
   [UMConfigure setLogEnabled:YES];
   [RNUMConfigure initWithAppkey:@"AppKey" channel:@"Channel"];
+  
+  // 友盟分享参考官方文档
+  // todo
+  
+  // 显示启动页
+  [RNSplashScreen show];
   
   return YES;
 }
@@ -47,6 +55,15 @@
 #else
   return [CodePush bundleURL];
 #endif
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+  BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+  if (!result) {
+    // 其他如支付等SDK的回调
+  }
+  return result;
 }
 
 @end

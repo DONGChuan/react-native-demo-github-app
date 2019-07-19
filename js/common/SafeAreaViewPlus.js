@@ -2,16 +2,22 @@ import React, {Component} from 'react';
 import {DeviceInfo, SafeAreaView, StyleSheet, View, ViewPropTypes} from 'react-native';
 import PropTypes from 'prop-types';
 
+/**
+ * 适配全面屏
+ */
 export default class SafeAreaViewPlus extends Component {
+
+    // 接收的属性
     static propTypes = {
         ...ViewPropTypes,
         topColor: PropTypes.string,
         bottomColor: PropTypes.string,
-        enablePlus: PropTypes.bool,
+        enablePlus: PropTypes.bool, // 启用 plus 还是使用系统自带的 SafeAreaView
         topInset: PropTypes.bool,
         bottomInset: PropTypes.bool,
-
     };
+
+    // 属性默认值
     static defaultProps = {
         topColor: 'transparent',
         bottomColor: '#f8f8f8',
@@ -21,18 +27,15 @@ export default class SafeAreaViewPlus extends Component {
     };
 
     genSafeAreaViewPlus() {
+        // children 是该容器组件内部嵌套的组件
         const {children, topColor, bottomColor, topInset, bottomInset} = this.props;
-        return <View style={[styles.container, this.props.style]}>
-            {this.getTopArea(topColor, topInset)}
-            {children}
-            {this.getBottomArea(bottomColor, bottomInset)}
-        </View>;
-    }
-
-    genSafeAreaView() {
-        return <SafeAreaView style={[styles.container, this.props.style]} {...this.props}>
-            {this.props.children}
-        </SafeAreaView>
+        return (
+            <View style={[styles.container, this.props.style]}>
+                {this.getTopArea(topColor, topInset)}
+                {children}
+                {this.getBottomArea(bottomColor, bottomInset)}
+            </View>
+        );
     }
 
     getTopArea(topColor, topInset) {
@@ -45,9 +48,16 @@ export default class SafeAreaViewPlus extends Component {
             : <View style={[styles.bottomArea, {backgroundColor: bottomColor}]}/>;
     }
 
+    genSafeAreaView() {
+        return (
+            <SafeAreaView style={[styles.container, this.props.style]} {...this.props}>
+                {this.props.children}
+            </SafeAreaView>
+        );
+    }
+
     render() {
-        const {enablePlus} = this.props;
-        return enablePlus ? this.genSafeAreaViewPlus() : this.genSafeAreaView();
+        return this.props.enablePlus ? this.genSafeAreaViewPlus() : this.genSafeAreaView();
     }
 }
 const styles = StyleSheet.create({

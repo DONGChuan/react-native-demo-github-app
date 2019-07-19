@@ -16,6 +16,6 @@
   if ([UMConfigure respondsToSelector:sel]) {
     [UMConfigure performSelector:sel withObject:@"react-native" withObject:@"2.0"];
   }
-  [UMConfigure initWithAppkey:appkey channel:channel];
+  //[UMConfigure initWithAppkey:appkey channel:channel];
 }
 @end

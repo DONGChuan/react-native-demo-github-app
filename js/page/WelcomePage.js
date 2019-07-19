@@ -15,7 +15,7 @@ class WelcomePage extends Component<Props> {
             NavigationUtil.resetToHomPage({
                 navigation: this.props.navigation
             })
-        }, 200);
+        }, 3000);
     }
 
     componentWillUnmount() {

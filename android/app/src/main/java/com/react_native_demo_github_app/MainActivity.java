@@ -1,7 +1,7 @@
 package com.react_native_demo_github_app;
 
 import android.os.Bundle;
-
+import org.devio.rn.splashscreen.SplashScreen;
 import com.facebook.react.ReactActivity;
 import com.umeng.analytics.MobclickAgent;
 
@@ -18,6 +18,7 @@ public class MainActivity extends ReactActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen.show(this);
         super.onCreate(savedInstanceState);
 
         MobclickAgent.setSessionContinueMillis(1000);

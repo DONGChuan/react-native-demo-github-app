@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		08797F46251C64100F721EEF64AAD344 /* UMCShare */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A669382222024943D23AC81401BE4737 /* Build configuration list for PBXAggregateTarget "UMCShare" */;
+			buildPhases = (
+			);
+			dependencies = (
+				DD5941773CD99F0A6AF95F1F5334F71F /* PBXTargetDependency */,
+			);
+			name = UMCShare;
+		};
 		6075E73CE9761233A64B697DA4780D60 /* UMCCommonLog */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 9DF695D117A32C4130EBADE4EA5BF03A /* Build configuration list for PBXAggregateTarget "UMCCommonLog" */;
@@ -47,27 +57,20 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1BC727AEB5E84487BC6C1D59F5E3DFA3 /* Pods-react_native_demo_github_app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 303F687ECA42D4A600FB7623FF4D4370 /* Pods-react_native_demo_github_app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3357F9C3DD09999CDE253ED6F961F8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		B08EE0E91ACCDE182D9281E92F9D2CA8 /* Pods-react_native_demo_github_app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5564684E222E46C4438E7091DFA600 /* Pods-react_native_demo_github_app-dummy.m */; };
+		3321156EFFA734843CD30B80657752AC /* Pods-react_native_demo_github_app-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 303F687ECA42D4A600FB7623FF4D4370 /* Pods-react_native_demo_github_app-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F802015D661C0B421FCDAC3DA28B413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		5998E5769C4409338419345C5391DF2D /* Pods-react_native_demo_github_app-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5564684E222E46C4438E7091DFA600 /* Pods-react_native_demo_github_app-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		12997A65FE19CEA222A768615BCE23C4 /* PBXContainerItemProxy */ = {
+		06EFA5B08CFEF9FF388D3151ED78E44E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6075E73CE9761233A64B697DA4780D60;
-			remoteInfo = UMCCommonLog;
+			remoteGlobalIDString = 6F6B630FA5213AB083E7CEF1F986FE44;
+			remoteInfo = UMCCommon;
 		};
-		1B151B43C326534F2C218A60495DE22C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B5BB4D9C85FBB3B774B6C624239821A;
-			remoteInfo = UMCSecurityPlugins;
-		};
-		374B0B340B98F832662E29160860A331 /* PBXContainerItemProxy */ = {
+		2366824F97DD26F5A87849B66A5F345B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -81,7 +84,28 @@
 			remoteGlobalIDString = 6F6B630FA5213AB083E7CEF1F986FE44;
 			remoteInfo = UMCCommon;
 		};
-		6534338BB5079EF708AC832F594174E5 /* PBXContainerItemProxy */ = {
+		B788151B4B7463D23032911B2203D1FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B5BB4D9C85FBB3B774B6C624239821A;
+			remoteInfo = UMCSecurityPlugins;
+		};
+		B8D6A055586D4724124B9516B9C67AE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08797F46251C64100F721EEF64AAD344;
+			remoteInfo = UMCShare;
+		};
+		D228E9699960F95BE2871232C763DB52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6075E73CE9761233A64B697DA4780D60;
+			remoteInfo = UMCCommonLog;
+		};
+		DD545642DE83A2423F7D16F891509E73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -92,106 +116,185 @@
 
 /* Begin PBXFileReference section */
 		1A5564684E222E46C4438E7091DFA600 /* Pods-react_native_demo_github_app-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-react_native_demo_github_app-dummy.m"; sourceTree = "<group>"; };
-		23FF6935B876ABA944CD71D2B8DFFB75 /* UMCCommonLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCCommonLog.xcconfig; sourceTree = "<group>"; };
+		1C11D57EDEFD9D75DC9E4639C9B1F660 /* UMAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalytics.framework; sourceTree = "<group>"; };
+		1C8DF31C2E62C6D955ED7CC72D641720 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMSocialSDKResources.bundle; path = UMShare/UMSocialUI/UMSocialSDKResources.bundle; sourceTree = "<group>"; };
+		235097E36B2B2B1DE3ACC1702D464679 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialQQHandler.h; path = UMShare/SocialLibraries/QQ/UMSocialQQHandler.h; sourceTree = "<group>"; };
+		24D153429DB46446069E4E94BF2639BB /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialWechatHandler.h; path = UMShare/SocialLibraries/WeChat/UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		2DAD313D4C31FCC7A4CCAF9A89DD6A65 /* UMCAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCAnalytics.xcconfig; sourceTree = "<group>"; };
 		303F687ECA42D4A600FB7623FF4D4370 /* Pods-react_native_demo_github_app-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-react_native_demo_github_app-umbrella.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		38CF16259D2F999C3ABD651F4CCAA42F /* Pods-react_native_demo_github_app-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-react_native_demo_github_app-Info.plist"; sourceTree = "<group>"; };
 		3A808776F42B471051B78FD8165EF7B9 /* Pods-react_native_demo_github_app-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-react_native_demo_github_app-acknowledgements.plist"; sourceTree = "<group>"; };
-		54889EFF9DACCCBE9E140804088D80CC /* UMCSecurityPlugins.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCSecurityPlugins.xcconfig; sourceTree = "<group>"; };
-		6B124AD3872D8B1C1FC2B9A8D4EAAAB2 /* UMCAnalytics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCAnalytics.xcconfig; sourceTree = "<group>"; };
-		750441CBA84A159AAC037B8AD4B41E1A /* UMCCommon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCCommon.xcconfig; sourceTree = "<group>"; };
-		759E49D6E79E6C91972D99AEB295393D /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTDID.framework; path = thirdparties/UTDID.framework; sourceTree = "<group>"; };
-		7A46B543EC1EC0BBBEC198DA0C1FDFFA /* SecurityEnvSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityEnvSDK.framework; path = thirdparties/SecurityEnvSDK.framework; sourceTree = "<group>"; };
+		526B27365B8EC7D3EB0D28585DC9C4AC /* libSocialQQ.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialQQ.a; path = UMShare/SocialLibraries/QQ/libSocialQQ.a; sourceTree = "<group>"; };
+		54445F7C665330F040A2205EE993F2C9 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTDID.framework; path = thirdparties/UTDID.framework; sourceTree = "<group>"; };
+		5635464A26B9C2454872D54C445D25AB /* libSocialEmail.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialEmail.a; path = UMShare/SocialLibraries/Email/libSocialEmail.a; sourceTree = "<group>"; };
+		672FD119556C49F4EBEA6CC3C698834E /* libSocialWeChat.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialWeChat.a; path = UMShare/SocialLibraries/WeChat/libSocialWeChat.a; sourceTree = "<group>"; };
+		7B9F6DD296B48EB1B633541F886DD37D /* SecurityEnvSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityEnvSDK.framework; path = thirdparties/SecurityEnvSDK.framework; sourceTree = "<group>"; };
 		7DA7EBE21ECAF7BA5999135BE1A8C999 /* Pods-react_native_demo_github_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-react_native_demo_github_app.debug.xcconfig"; sourceTree = "<group>"; };
+		86A2127799EF3733E9F76AFA086ABF7B /* UMCommonLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMCommonLog.framework; path = UMCommonLog/UMCommonLog.framework; sourceTree = "<group>"; };
+		89921A327BA630D6CA45B90B21C165FA /* UMSocialSmsHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialSmsHandler.h; path = UMShare/SocialLibraries/SMS/UMSocialSmsHandler.h; sourceTree = "<group>"; };
 		8E2F109CC609AFF2017A0B375A4BB4D2 /* Pods-react_native_demo_github_app-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-react_native_demo_github_app-resources.sh"; sourceTree = "<group>"; };
+		95C14615FEC7645F912892C51480CE4C /* UMSocialEmailHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialEmailHandler.h; path = UMShare/SocialLibraries/Email/UMSocialEmailHandler.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DB59CD191EF2286CF8B992A99ADD560 /* libSocialSMS.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialSMS.a; path = UMShare/SocialLibraries/SMS/libSocialSMS.a; sourceTree = "<group>"; };
 		A14FF65750514D77046DAC1E09223053 /* Pods-react_native_demo_github_app-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-react_native_demo_github_app-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B052DDB897FEF8D16D86CF18A9C13422 /* UMCommonLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMCommonLog.framework; path = UMCommonLog/UMCommonLog.framework; sourceTree = "<group>"; };
 		B484D676104726FB5490A3B07068A099 /* Pods_react_native_demo_github_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_react_native_demo_github_app.framework; path = "Pods-react_native_demo_github_app.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB356435523B5B9630DFBCB48FAD37DE /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
+		B4F94851D21042814046C4AE7658EDE4 /* UMCCommon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCCommon.xcconfig; sourceTree = "<group>"; };
+		B56E9D315DA4B2E42C717A3A2E7C2023 /* UMCCommonLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCCommonLog.xcconfig; sourceTree = "<group>"; };
+		B96066025793CE7E641108D099897088 /* UMCommonLog.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMCommonLog.bundle; path = UMCommonLog/UMCommonLog.bundle; sourceTree = "<group>"; };
+		B9DF71C5A9A95A077EFB467D9718DE7E /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UShareUI.framework; path = UMShare/UMSocialUI/UShareUI.framework; sourceTree = "<group>"; };
+		C03A6AAEC53BC682CBDB5765EDEE718A /* libSocialSina.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSocialSina.a; path = UMShare/SocialLibraries/Sina/libSocialSina.a; sourceTree = "<group>"; };
+		CB069D8DD952BD4F32F30BF6A4FCD05B /* UMCSecurityPlugins.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCSecurityPlugins.xcconfig; sourceTree = "<group>"; };
 		CF75D888C3B12CD3F355BB78E6735ED4 /* Pods-react_native_demo_github_app.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-react_native_demo_github_app.modulemap"; sourceTree = "<group>"; };
-		F48C710B7DA7E118174D8600023E494D /* UMCommonLog.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMCommonLog.bundle; path = UMCommonLog/UMCommonLog.bundle; sourceTree = "<group>"; };
+		D1345FECF799659B19008699D23B0C00 /* UMShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMShare.framework; path = UMShare/UMShare.framework; sourceTree = "<group>"; };
+		EC321B24CC0A050E614F94A5C517776B /* UMCShare.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCShare.xcconfig; sourceTree = "<group>"; };
+		EFEB872CD310196BA9B91F2D97F1C4A8 /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMSocialSinaHandler.h; path = UMShare/SocialLibraries/Sina/UMSocialSinaHandler.h; sourceTree = "<group>"; };
+		F84276399A0CCCE461EE21AEE885636D /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
 		F8D164729512FB4C9E36BC93DF6AF309 /* Pods-react_native_demo_github_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-react_native_demo_github_app.release.xcconfig"; sourceTree = "<group>"; };
-		FB3EDD3038529F14BD567D1B19F0E832 /* UMAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E4FD5F29980D93212D4E861891549949 /* Frameworks */ = {
+		D5C2C080F90F95B29635E9B9D25A9E1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3357F9C3DD09999CDE253ED6F961F8AB /* Foundation.framework in Frameworks */,
+				4F802015D661C0B421FCDAC3DA28B413 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		013D450CF2C39C02B051818773F4BA71 /* UMCAnalytics */ = {
+		008EE87DDB3DE58603A41BA6A05ED057 /* ReducedQQ */ = {
 			isa = PBXGroup;
 			children = (
-				B58FC12B108D3D3B9FA194DD2764B33B /* Frameworks */,
-				54664D1BDBB781EFF64D56BF1A9AC431 /* Support Files */,
+				235097E36B2B2B1DE3ACC1702D464679 /* UMSocialQQHandler.h */,
+				06AD6B8B16BC907C9ACB158950F807E8 /* Frameworks */,
 			);
-			name = UMCAnalytics;
-			path = UMCAnalytics;
+			name = ReducedQQ;
 			sourceTree = "<group>";
 		};
-		017189946AD2879FFA51287404C2C53C /* Frameworks */ = {
+		0311B11F02554DDE2A3F9D2AA8D7EEE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB356435523B5B9630DFBCB48FAD37DE /* UMCommon.framework */,
+				B9DF71C5A9A95A077EFB467D9718DE7E /* UShareUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		105BB530F3BC0A6B6C3D2BC6183A80E2 /* Support Files */ = {
+		03C1B299774E85C25B3129E7EA83E75B /* Email */ = {
 			isa = PBXGroup;
 			children = (
-				54889EFF9DACCCBE9E140804088D80CC /* UMCSecurityPlugins.xcconfig */,
+				95C14615FEC7645F912892C51480CE4C /* UMSocialEmailHandler.h */,
+				5FCA41F9B82B31CABBE83D7D6F444365 /* Frameworks */,
+			);
+			name = Email;
+			sourceTree = "<group>";
+		};
+		06AD6B8B16BC907C9ACB158950F807E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				526B27365B8EC7D3EB0D28585DC9C4AC /* libSocialQQ.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15F719E49B581BB318C72AE89CB77E2D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0311B11F02554DDE2A3F9D2AA8D7EEE9 /* Frameworks */,
+				CAC38BC75D7B905BCAE6C33F01F20A08 /* Resources */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		2F22F128941FAC25D8C88275B1596CB2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC321B24CC0A050E614F94A5C517776B /* UMCShare.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/UMCSecurityPlugins";
+			path = "../Target Support Files/UMCShare";
 			sourceTree = "<group>";
 		};
-		22A2872B03EB6988786A2568F5FB604A /* UMCCommonLog */ = {
+		3BED8BD9CBE190C2635F92B0BE3B675C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BFD01BF0F815C65ECDD7A6DEF458F92 /* Frameworks */,
-				FD1CA4F3E5F11E813B3821ED37C74AD5 /* Resources */,
-				E1FAC2802906BEDE1351AEC5EE7E8010 /* Support Files */,
+				D1345FECF799659B19008699D23B0C00 /* UMShare.framework */,
 			);
-			name = UMCCommonLog;
-			path = UMCCommonLog;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		48563024498A952F883D7357280606C8 /* UMCSecurityPlugins */ = {
+		3D681740092D0A52F17BCA15B385F531 /* UMCShare */ = {
 			isa = PBXGroup;
 			children = (
-				9C27F02F0361CC133D1FDED9E1F261BB /* Frameworks */,
-				105BB530F3BC0A6B6C3D2BC6183A80E2 /* Support Files */,
+				BCDA0E9321E1D354FBE866F589A72E81 /* Core */,
+				952A2ADDB5274672688F2BFBF0467D3E /* Social */,
+				2F22F128941FAC25D8C88275B1596CB2 /* Support Files */,
+				15F719E49B581BB318C72AE89CB77E2D /* UI */,
 			);
-			name = UMCSecurityPlugins;
-			path = UMCSecurityPlugins;
+			name = UMCShare;
+			path = UMCShare;
 			sourceTree = "<group>";
 		};
-		4ED13E8240DCB9D09E5B5B451F808F10 /* UMCCommon */ = {
+		49BE13449FEC93A47908001527E0AA72 /* UMCCommon */ = {
 			isa = PBXGroup;
 			children = (
-				017189946AD2879FFA51287404C2C53C /* Frameworks */,
-				E71E7EF82BB3477B5488C254B632644E /* Support Files */,
+				EA2B495EB7B1041E7A751A259BC10BFF /* Frameworks */,
+				4FD0961A797E609345C419348761BB29 /* Support Files */,
 			);
 			name = UMCCommon;
 			path = UMCCommon;
 			sourceTree = "<group>";
 		};
-		54664D1BDBB781EFF64D56BF1A9AC431 /* Support Files */ = {
+		4FD0961A797E609345C419348761BB29 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6B124AD3872D8B1C1FC2B9A8D4EAAAB2 /* UMCAnalytics.xcconfig */,
+				B4F94851D21042814046C4AE7658EDE4 /* UMCCommon.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMCCommon";
+			sourceTree = "<group>";
+		};
+		582F41A9FFBE19D8FD0923F8A0563C09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DB59CD191EF2286CF8B992A99ADD560 /* libSocialSMS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A8DC530EC77DAF4468FE921F8EFA9FE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DAD313D4C31FCC7A4CCAF9A89DD6A65 /* UMCAnalytics.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/UMCAnalytics";
+			sourceTree = "<group>";
+		};
+		5D581B976F88E9830724847E92EFEAA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B96066025793CE7E641108D099897088 /* UMCommonLog.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5F052567C58EF7B3C0223A6C78BD90AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C03A6AAEC53BC682CBDB5765EDEE718A /* libSocialSina.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FCA41F9B82B31CABBE83D7D6F444365 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5635464A26B9C2454872D54C445D25AB /* libSocialEmail.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		65FA4A020FBAF1A6A8FBF32764E9E9F8 /* Targets Support Files */ = {
@@ -202,10 +305,55 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6BFD01BF0F815C65ECDD7A6DEF458F92 /* Frameworks */ = {
+		6B6EF1637A0DB23F65102F18D90629FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B052DDB897FEF8D16D86CF18A9C13422 /* UMCommonLog.framework */,
+				7B9F6DD296B48EB1B633541F886DD37D /* SecurityEnvSDK.framework */,
+				54445F7C665330F040A2205EE993F2C9 /* UTDID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F2C05BBAB43925DDECDCD7BCBCF6868 /* ReducedSina */ = {
+			isa = PBXGroup;
+			children = (
+				EFEB872CD310196BA9B91F2D97F1C4A8 /* UMSocialSinaHandler.h */,
+				5F052567C58EF7B3C0223A6C78BD90AE /* Frameworks */,
+			);
+			name = ReducedSina;
+			sourceTree = "<group>";
+		};
+		73DA7A698B481EB9E0FF2943AE8F2E49 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B56E9D315DA4B2E42C717A3A2E7C2023 /* UMCCommonLog.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMCCommonLog";
+			sourceTree = "<group>";
+		};
+		7577A3691E0A063772CE98A65790B066 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB069D8DD952BD4F32F30BF6A4FCD05B /* UMCSecurityPlugins.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMCSecurityPlugins";
+			sourceTree = "<group>";
+		};
+		7DD7228A693DB480EFA6CB894FC834BA /* SMS */ = {
+			isa = PBXGroup;
+			children = (
+				89921A327BA630D6CA45B90B21C165FA /* UMSocialSmsHandler.h */,
+				582F41A9FFBE19D8FD0923F8A0563C09 /* Frameworks */,
+			);
+			name = SMS;
+			sourceTree = "<group>";
+		};
+		8C86AA301B0B3F1E6726C2E73ED0807F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C11D57EDEFD9D75DC9E4639C9B1F660 /* UMAnalytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,19 +375,41 @@
 			path = "Target Support Files/Pods-react_native_demo_github_app";
 			sourceTree = "<group>";
 		};
-		9C27F02F0361CC133D1FDED9E1F261BB /* Frameworks */ = {
+		952A2ADDB5274672688F2BFBF0467D3E /* Social */ = {
 			isa = PBXGroup;
 			children = (
-				7A46B543EC1EC0BBBEC198DA0C1FDFFA /* SecurityEnvSDK.framework */,
-				759E49D6E79E6C91972D99AEB295393D /* UTDID.framework */,
+				03C1B299774E85C25B3129E7EA83E75B /* Email */,
+				008EE87DDB3DE58603A41BA6A05ED057 /* ReducedQQ */,
+				6F2C05BBAB43925DDECDCD7BCBCF6868 /* ReducedSina */,
+				D8D6822407AA70A52B6B53F8D05A1F15 /* ReducedWeChat */,
+				7DD7228A693DB480EFA6CB894FC834BA /* SMS */,
 			);
-			name = Frameworks;
+			name = Social;
 			sourceTree = "<group>";
 		};
-		B58FC12B108D3D3B9FA194DD2764B33B /* Frameworks */ = {
+		B70B24606480E8420C2EF06D8165FACA /* UMCCommonLog */ = {
 			isa = PBXGroup;
 			children = (
-				FB3EDD3038529F14BD567D1B19F0E832 /* UMAnalytics.framework */,
+				BFD07DC631F10C4440E26B65CB64249C /* Frameworks */,
+				5D581B976F88E9830724847E92EFEAA9 /* Resources */,
+				73DA7A698B481EB9E0FF2943AE8F2E49 /* Support Files */,
+			);
+			name = UMCCommonLog;
+			path = UMCCommonLog;
+			sourceTree = "<group>";
+		};
+		BCDA0E9321E1D354FBE866F589A72E81 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3BED8BD9CBE190C2635F92B0BE3B675C /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		BFD07DC631F10C4440E26B65CB64249C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86A2127799EF3733E9F76AFA086ABF7B /* UMCommonLog.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,12 +422,52 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		C23A6B0F6C78FA273B08716705787A68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA5732C458D7FB898AC10148AD86E119 /* UMCAnalytics */,
+				49BE13449FEC93A47908001527E0AA72 /* UMCCommon */,
+				B70B24606480E8420C2EF06D8165FACA /* UMCCommonLog */,
+				CDDCCF93F471D0216CEFF2991F624063 /* UMCSecurityPlugins */,
+				3D681740092D0A52F17BCA15B385F531 /* UMCShare */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA5732C458D7FB898AC10148AD86E119 /* UMCAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				8C86AA301B0B3F1E6726C2E73ED0807F /* Frameworks */,
+				5A8DC530EC77DAF4468FE921F8EFA9FE /* Support Files */,
+			);
+			name = UMCAnalytics;
+			path = UMCAnalytics;
+			sourceTree = "<group>";
+		};
+		CAC38BC75D7B905BCAE6C33F01F20A08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C8DF31C2E62C6D955ED7CC72D641720 /* UMSocialSDKResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CDDCCF93F471D0216CEFF2991F624063 /* UMCSecurityPlugins */ = {
+			isa = PBXGroup;
+			children = (
+				6B6EF1637A0DB23F65102F18D90629FB /* Frameworks */,
+				7577A3691E0A063772CE98A65790B066 /* Support Files */,
+			);
+			name = UMCSecurityPlugins;
+			path = UMCSecurityPlugins;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				F44AAC3E4DDD43624C42A7EC5999B85E /* Pods */,
+				C23A6B0F6C78FA273B08716705787A68 /* Pods */,
 				DF4E81117ECA0C6849EBD336AB664677 /* Products */,
 				65FA4A020FBAF1A6A8FBF32764E9E9F8 /* Targets Support Files */,
 			);
@@ -271,6 +481,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D8D6822407AA70A52B6B53F8D05A1F15 /* ReducedWeChat */ = {
+			isa = PBXGroup;
+			children = (
+				24D153429DB46446069E4E94BF2639BB /* UMSocialWechatHandler.h */,
+				FA76540E65C5ECC985F22EB484058089 /* Frameworks */,
+			);
+			name = ReducedWeChat;
+			sourceTree = "<group>";
+		};
 		DF4E81117ECA0C6849EBD336AB664677 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,51 +498,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E1FAC2802906BEDE1351AEC5EE7E8010 /* Support Files */ = {
+		EA2B495EB7B1041E7A751A259BC10BFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				23FF6935B876ABA944CD71D2B8DFFB75 /* UMCCommonLog.xcconfig */,
+				F84276399A0CCCE461EE21AEE885636D /* UMCommon.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/UMCCommonLog";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E71E7EF82BB3477B5488C254B632644E /* Support Files */ = {
+		FA76540E65C5ECC985F22EB484058089 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				750441CBA84A159AAC037B8AD4B41E1A /* UMCCommon.xcconfig */,
+				672FD119556C49F4EBEA6CC3C698834E /* libSocialWeChat.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/UMCCommon";
-			sourceTree = "<group>";
-		};
-		F44AAC3E4DDD43624C42A7EC5999B85E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				013D450CF2C39C02B051818773F4BA71 /* UMCAnalytics */,
-				4ED13E8240DCB9D09E5B5B451F808F10 /* UMCCommon */,
-				22A2872B03EB6988786A2568F5FB604A /* UMCCommonLog */,
-				48563024498A952F883D7357280606C8 /* UMCSecurityPlugins */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FD1CA4F3E5F11E813B3821ED37C74AD5 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F48C710B7DA7E118174D8600023E494D /* UMCommonLog.bundle */,
-			);
-			name = Resources;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0AFF15BDE9579366DF9AEBF5F2FEA3AE /* Headers */ = {
+		3BEB6F7199FCD1E72AED81E783FBF9DA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC727AEB5E84487BC6C1D59F5E3DFA3 /* Pods-react_native_demo_github_app-umbrella.h in Headers */,
+				3321156EFFA734843CD30B80657752AC /* Pods-react_native_demo_github_app-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,20 +530,21 @@
 /* Begin PBXNativeTarget section */
 		A60940DF09C9DD642CF0FA59D5D9F015 /* Pods-react_native_demo_github_app */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 486016DC54CC02D5E920B23C00E9659A /* Build configuration list for PBXNativeTarget "Pods-react_native_demo_github_app" */;
+			buildConfigurationList = 1BC68820C9C39FCC70F76AC51425E787 /* Build configuration list for PBXNativeTarget "Pods-react_native_demo_github_app" */;
 			buildPhases = (
-				0AFF15BDE9579366DF9AEBF5F2FEA3AE /* Headers */,
-				9F05CF998F883068A9A3A22DD23379BF /* Sources */,
-				E4FD5F29980D93212D4E861891549949 /* Frameworks */,
-				27D7AB608A69A244F0658AC8C25EE1B5 /* Resources */,
+				3BEB6F7199FCD1E72AED81E783FBF9DA /* Headers */,
+				4B2989E63ABF10BF3A2896550C3D404B /* Sources */,
+				D5C2C080F90F95B29635E9B9D25A9E1C /* Frameworks */,
+				9A8841BCEA35EEF83A73189F7E50695E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DE598105A185DE37DE7FE3761FEE0735 /* PBXTargetDependency */,
-				2F4B2A7462FCEEBA7672D8723FEF93BD /* PBXTargetDependency */,
-				8581579ADE7698C767A1878650A2E040 /* PBXTargetDependency */,
-				F3918572EAFAEB0CD2FB59627D559536 /* PBXTargetDependency */,
+				C54A6D4058E964EFBD878251287B6493 /* PBXTargetDependency */,
+				C94C70DD973228347EF8EF0AB98ED076 /* PBXTargetDependency */,
+				AAC344156EDE8D8A601A68014E7971EC /* PBXTargetDependency */,
+				64416A73B1F4A3A183BFDF2B17F4271D /* PBXTargetDependency */,
+				E515805DAE3E95D825937AA56139A5FE /* PBXTargetDependency */,
 			);
 			name = "Pods-react_native_demo_github_app";
 			productName = "Pods-react_native_demo_github_app";
@@ -378,12 +577,13 @@
 				6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */,
 				6075E73CE9761233A64B697DA4780D60 /* UMCCommonLog */,
 				8B5BB4D9C85FBB3B774B6C624239821A /* UMCSecurityPlugins */,
+				08797F46251C64100F721EEF64AAD344 /* UMCShare */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		27D7AB608A69A244F0658AC8C25EE1B5 /* Resources */ = {
+		9A8841BCEA35EEF83A73189F7E50695E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,28 +593,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9F05CF998F883068A9A3A22DD23379BF /* Sources */ = {
+		4B2989E63ABF10BF3A2896550C3D404B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B08EE0E91ACCDE182D9281E92F9D2CA8 /* Pods-react_native_demo_github_app-dummy.m in Sources */,
+				5998E5769C4409338419345C5391DF2D /* Pods-react_native_demo_github_app-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2F4B2A7462FCEEBA7672D8723FEF93BD /* PBXTargetDependency */ = {
+		64416A73B1F4A3A183BFDF2B17F4271D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = UMCCommon;
-			target = 6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */;
-			targetProxy = 374B0B340B98F832662E29160860A331 /* PBXContainerItemProxy */;
+			name = UMCSecurityPlugins;
+			target = 8B5BB4D9C85FBB3B774B6C624239821A /* UMCSecurityPlugins */;
+			targetProxy = B788151B4B7463D23032911B2203D1FC /* PBXContainerItemProxy */;
 		};
-		8581579ADE7698C767A1878650A2E040 /* PBXTargetDependency */ = {
+		AAC344156EDE8D8A601A68014E7971EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UMCCommonLog;
 			target = 6075E73CE9761233A64B697DA4780D60 /* UMCCommonLog */;
-			targetProxy = 12997A65FE19CEA222A768615BCE23C4 /* PBXContainerItemProxy */;
+			targetProxy = D228E9699960F95BE2871232C763DB52 /* PBXContainerItemProxy */;
+		};
+		C54A6D4058E964EFBD878251287B6493 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMCAnalytics;
+			target = FD2E8643412994484A50DA7D3BFB1EFC /* UMCAnalytics */;
+			targetProxy = DD545642DE83A2423F7D16F891509E73 /* PBXContainerItemProxy */;
+		};
+		C94C70DD973228347EF8EF0AB98ED076 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UMCCommon;
+			target = 6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */;
+			targetProxy = 2366824F97DD26F5A87849B66A5F345B /* PBXContainerItemProxy */;
 		};
 		D6F37A14E44787E5115BD54D5A2580C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -422,24 +634,24 @@
 			target = 6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */;
 			targetProxy = 53023D3FFE4E5A2884C7F8871827AE08 /* PBXContainerItemProxy */;
 		};
-		DE598105A185DE37DE7FE3761FEE0735 /* PBXTargetDependency */ = {
+		DD5941773CD99F0A6AF95F1F5334F71F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = UMCAnalytics;
-			target = FD2E8643412994484A50DA7D3BFB1EFC /* UMCAnalytics */;
-			targetProxy = 6534338BB5079EF708AC832F594174E5 /* PBXContainerItemProxy */;
+			name = UMCCommon;
+			target = 6F6B630FA5213AB083E7CEF1F986FE44 /* UMCCommon */;
+			targetProxy = 06EFA5B08CFEF9FF388D3151ED78E44E /* PBXContainerItemProxy */;
 		};
-		F3918572EAFAEB0CD2FB59627D559536 /* PBXTargetDependency */ = {
+		E515805DAE3E95D825937AA56139A5FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = UMCSecurityPlugins;
-			target = 8B5BB4D9C85FBB3B774B6C624239821A /* UMCSecurityPlugins */;
-			targetProxy = 1B151B43C326534F2C218A60495DE22C /* PBXContainerItemProxy */;
+			name = UMCShare;
+			target = 08797F46251C64100F721EEF64AAD344 /* UMCShare */;
+			targetProxy = B8D6A055586D4724124B9516B9C67AE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0FA8F0DD743121A0380C46915B94DFC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23FF6935B876ABA944CD71D2B8DFFB75 /* UMCCommonLog.xcconfig */;
+			baseConfigurationReference = B56E9D315DA4B2E42C717A3A2E7C2023 /* UMCCommonLog.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -453,7 +665,7 @@
 		};
 		258154CEB5A6EF5C276F0809574ED1F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B124AD3872D8B1C1FC2B9A8D4EAAAB2 /* UMCAnalytics.xcconfig */;
+			baseConfigurationReference = 2DAD313D4C31FCC7A4CCAF9A89DD6A65 /* UMCAnalytics.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -467,7 +679,7 @@
 		};
 		3B0CD83C8BFAB29266589E978AB64406 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23FF6935B876ABA944CD71D2B8DFFB75 /* UMCCommonLog.xcconfig */;
+			baseConfigurationReference = B56E9D315DA4B2E42C717A3A2E7C2023 /* UMCCommonLog.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -478,7 +690,7 @@
 			};
 			name = Debug;
 		};
-		6CAC2EED8A8B8F5E6609C214D16E5A65 /* Debug */ = {
+		3CEE304BA8BD134B6E53316FAAA8C321 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DA7EBE21ECAF7BA5999135BE1A8C999 /* Pods-react_native_demo_github_app.debug.xcconfig */;
 			buildSettings = {
@@ -510,6 +722,67 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		442B76D72E0D0EEC797C6B0AE15AABFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC321B24CC0A050E614F94A5C517776B /* UMCShare.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67439BD32E24195BCBC4E0A0DF0510B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC321B24CC0A050E614F94A5C517776B /* UMCShare.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8257EAC101AF9D2A2FF8D71633586C94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D164729512FB4C9E36BC93DF6AF309 /* Pods-react_native_demo_github_app.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-react_native_demo_github_app/Pods-react_native_demo_github_app-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-react_native_demo_github_app/Pods-react_native_demo_github_app.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -637,7 +910,7 @@
 		};
 		9B372B698D0D060503D204F495DCA231 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54889EFF9DACCCBE9E140804088D80CC /* UMCSecurityPlugins.xcconfig */;
+			baseConfigurationReference = CB069D8DD952BD4F32F30BF6A4FCD05B /* UMCSecurityPlugins.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -650,7 +923,7 @@
 		};
 		A0117A8E9A4972379554BBF13DECE75C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54889EFF9DACCCBE9E140804088D80CC /* UMCSecurityPlugins.xcconfig */;
+			baseConfigurationReference = CB069D8DD952BD4F32F30BF6A4FCD05B /* UMCSecurityPlugins.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -664,7 +937,7 @@
 		};
 		B8D82AA868BD0D3EA66F054CADA00383 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 750441CBA84A159AAC037B8AD4B41E1A /* UMCCommon.xcconfig */;
+			baseConfigurationReference = B4F94851D21042814046C4AE7658EDE4 /* UMCCommon.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -676,43 +949,9 @@
 			};
 			name = Release;
 		};
-		CAC88DDE8DE25A17A045284A68BCA95A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8D164729512FB4C9E36BC93DF6AF309 /* Pods-react_native_demo_github_app.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-react_native_demo_github_app/Pods-react_native_demo_github_app-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-react_native_demo_github_app/Pods-react_native_demo_github_app.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		E9B3C2E6E5264DA4F664E1A0AAFB547F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 750441CBA84A159AAC037B8AD4B41E1A /* UMCCommon.xcconfig */;
+			baseConfigurationReference = B4F94851D21042814046C4AE7658EDE4 /* UMCCommon.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -725,7 +964,7 @@
 		};
 		F35E39D7A81801ABAD0FDD9A23CED888 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B124AD3872D8B1C1FC2B9A8D4EAAAB2 /* UMCAnalytics.xcconfig */;
+			baseConfigurationReference = 2DAD313D4C31FCC7A4CCAF9A89DD6A65 /* UMCAnalytics.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -757,20 +996,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1BC68820C9C39FCC70F76AC51425E787 /* Build configuration list for PBXNativeTarget "Pods-react_native_demo_github_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CEE304BA8BD134B6E53316FAAA8C321 /* Debug */,
+				8257EAC101AF9D2A2FF8D71633586C94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				916E0404255105F480DC4950B7625F7A /* Debug */,
 				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		486016DC54CC02D5E920B23C00E9659A /* Build configuration list for PBXNativeTarget "Pods-react_native_demo_github_app" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6CAC2EED8A8B8F5E6609C214D16E5A65 /* Debug */,
-				CAC88DDE8DE25A17A045284A68BCA95A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -789,6 +1028,15 @@
 			buildConfigurations = (
 				3B0CD83C8BFAB29266589E978AB64406 /* Debug */,
 				0FA8F0DD743121A0380C46915B94DFC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A669382222024943D23AC81401BE4737 /* Build configuration list for PBXAggregateTarget "UMCShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				442B76D72E0D0EEC797C6B0AE15AABFF /* Debug */,
+				67439BD32E24195BCBC4E0A0DF0510B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
